@@ -3,10 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/DeskTop/AndroidStudioProjects/Guidomia2/app/src/main/res/drawable/divider.xml" value="0.1" />
         <entry key="..\:/Users/DeskTop/AndroidStudioProjects/Guidomia2/app/src/main/res/drawable/spinner_drawable.xml" value="0.292" />
         <entry key="..\:/Users/DeskTop/AndroidStudioProjects/Guidomia2/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.1" />
-        <entry key="..\:/Users/DeskTop/AndroidStudioProjects/Guidomia2/app/src/main/res/layout/activity_scrolling.xml" value="0.22" />
-        <entry key="..\:/Users/DeskTop/AndroidStudioProjects/Guidomia2/app/src/main/res/layout/car_item.xml" value="0.33" />
+        <entry key="..\:/Users/DeskTop/AndroidStudioProjects/Guidomia2/app/src/main/res/layout/activity_scrolling.xml" value="0.1" />
+        <entry key="..\:/Users/DeskTop/AndroidStudioProjects/Guidomia2/app/src/main/res/layout/car_item.xml" value="0.1" />
         <entry key="..\:/Users/DeskTop/AndroidStudioProjects/Guidomia2/app/src/main/res/layout/content.xml" value="0.1" />
         <entry key="..\:/Users/DeskTop/AndroidStudioProjects/Guidomia2/app/src/main/res/layout/content_scrolling.xml" value="0.14722222222222223" />
       </map>
