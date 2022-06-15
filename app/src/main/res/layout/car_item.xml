@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,156 +10,157 @@
         android:layout_width="0dp"
         android:layout_height="4dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@color/orange"
         app:layout_constraintEnd_toEndOf="@+id/materialCardView"
         app:layout_constraintStart_toStartOf="@+id/materialCardView"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
 
-<com.google.android.material.card.MaterialCardView
-    android:id="@+id/materialCardView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="16dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="16dp"
-    app:cardBackgroundColor="@color/light_grey"
-    app:cardCornerRadius="@dimen/small_radius"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    >
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cs_car"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-       >
-
-        <ImageView
-            android:id="@+id/iv_car_picture"
-            android:layout_width="100dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="@+id/ratingBar_car"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txt_car_title"
-            app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@tools:sample/avatars" />
-
-        <TextView
-            android:id="@+id/txt_car_title"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:textColor="@color/transparent_black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_car_picture"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Alpha" />
-
-        <TextView
-            android:id="@+id/txt_car_price"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="8dp"
-            android:textColor="@color/transparent_black"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/txt_car_title"
-            app:layout_constraintTop_toBottomOf="@+id/txt_car_title"
-            tools:text="Price: 65K" />
-
-        <RatingBar
-            android:id="@+id/ratingBar_car"
-            style="?android:attr/ratingBarStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="@+id/txt_car_price"
-            app:layout_constraintTop_toBottomOf="@+id/txt_car_price" />
-
-        <View
-            android:id="@+id/anchor"
-            android:layout_width="0dp"
-            android:layout_height="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ratingBar_car" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/light_grey"
+        app:cardCornerRadius="@dimen/small_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cs_detail"
+            android:id="@+id/cs_car"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/light_grey"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/anchor"
-            tools:visibility="visible">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/txt_title_pros"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="2dp"
-                android:text="@string/pros"
-                android:textColor="@color/transparent_black"
-                android:textSize="14sp"
-                android:textStyle="bold"
+            <ImageView
+                android:id="@+id/iv_car_picture"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:contentDescription="@string/car_picture"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@+id/ratingBar_car"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/txt_car_title"
+                app:layout_constraintVertical_bias="0.0"
+                tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/txt_title_cons"
+                android:id="@+id/txt_car_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/cons"
+                android:layout_marginEnd="8dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/transparent_black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_car_picture"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Alpha" />
+
+            <TextView
+                android:id="@+id/txt_car_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="8dp"
+                android:includeFontPadding="false"
                 android:textColor="@color/transparent_black"
                 android:textSize="14sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txt_car_title"
+                app:layout_constraintTop_toBottomOf="@+id/txt_car_title"
+                tools:text="Price: 65K" />
+
+            <RatingBar
+                android:id="@+id/ratingBar_car"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/txt_car_price"
+                app:layout_constraintTop_toBottomOf="@+id/txt_car_price" />
+
+            <View
+                android:id="@+id/anchor"
+                android:layout_width="0dp"
+                android:layout_height="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recycler_pros" />
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar_car" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_cons"
-                android:layout_width="0dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cs_detail"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clickable="false"
-                android:clipToPadding="false"
-                android:focusable="false"
-                android:paddingBottom="20dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:background="@color/light_grey"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/txt_title_cons"
-                app:layout_constraintTop_toBottomOf="@+id/txt_title_cons"
-                tools:listitem="@layout/detail_car_item" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/anchor"
+                tools:visibility="visible">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_pros"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:clickable="false"
-                android:focusable="false"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/txt_title_pros"
-                app:layout_constraintTop_toBottomOf="@+id/txt_title_pros"
-                tools:listitem="@layout/detail_car_item" />
+                <TextView
+                    android:id="@+id/txt_title_pros"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/pros"
+                    android:textColor="@color/transparent_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
+                <TextView
+                    android:id="@+id/txt_title_cons"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/cons"
+                    android:textColor="@color/transparent_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_pros" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_cons"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:clipToPadding="false"
+                    android:focusable="false"
+                    android:paddingBottom="20dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txt_title_cons"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_title_cons"
+                    tools:listitem="@layout/detail_car_item" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_pros"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txt_title_pros"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_title_pros"
+                    tools:listitem="@layout/detail_car_item" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

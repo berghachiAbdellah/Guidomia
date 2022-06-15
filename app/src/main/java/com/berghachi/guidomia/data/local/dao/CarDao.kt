@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.berghachi.guidomia.data.local.model.CarEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface CarDao {
@@ -13,6 +14,9 @@ interface CarDao {
     suspend fun insertCars(cars: List<CarEntity>)
 
     @Query("SELECT * FROM Car")
-    suspend fun getCars(): List<CarEntity>
+    fun getCars(): Flow<List<CarEntity>>
+
+    @Query("SELECT count(*) FROM Car")
+    suspend fun getCarCount(): Int
 
 }

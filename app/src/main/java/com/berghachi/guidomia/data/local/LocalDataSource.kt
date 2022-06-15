@@ -12,4 +12,5 @@ import com.berghachi.guidomia.data.local.model.CarEntity
 abstract class LocalDataSource : RoomDatabase() {
 
     abstract fun getCarDao(): CarDao
+
 }

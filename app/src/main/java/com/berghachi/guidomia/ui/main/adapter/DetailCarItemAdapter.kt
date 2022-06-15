@@ -7,9 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.berghachi.guidomia.databinding.DetailCarItemBinding
 
 class DetailCarItemAdapter(
-    private val details: List<String>,
-
-    ) : RecyclerView.Adapter<DetailCarItemAdapter.ViewHolder>() {
+    private val details: List<String>
+) : RecyclerView.Adapter<DetailCarItemAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(

@@ -9,7 +9,6 @@ import kotlin.reflect.KClass
 object JsonReader {
 
     private val gson = Gson()
-
     fun <T : Any> readFile(context: Context, fileName: String, clazz: KClass<T>): T? {
         val json: String?
         val newObject: T?
