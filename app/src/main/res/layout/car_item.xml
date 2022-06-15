@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:clickable="false">
 
     <View
         android:id="@+id/separator"
@@ -102,6 +104,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/light_grey"
                 android:visibility="gone"
+                android:descendantFocusability="blocksDescendants"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/anchor"
@@ -131,33 +134,29 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/recycler_pros" />
+                    app:layout_constraintTop_toBottomOf="@+id/ll_pros" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_cons"
+                <LinearLayout
+                    android:id="@+id/ll_cons"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:clickable="false"
+                    android:orientation="vertical"
                     android:clipToPadding="false"
-                    android:focusable="false"
                     android:paddingBottom="20dp"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/txt_title_cons"
                     app:layout_constraintTop_toBottomOf="@+id/txt_title_cons"
-                    tools:listitem="@layout/detail_car_item" />
+                     />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_pros"
+                <LinearLayout
+                    android:id="@+id/ll_pros"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:clickable="false"
-                    android:focusable="false"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/txt_title_pros"
                     app:layout_constraintTop_toBottomOf="@+id/txt_title_pros"
-                    tools:listitem="@layout/detail_car_item" />
+                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,9 +3,12 @@ package com.berghachi.guidomia.ui.main.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.berghachi.guidomia.R
 import com.berghachi.guidomia.databinding.CarItemBinding
+import com.berghachi.guidomia.databinding.DetailCarItemBinding
 import com.berghachi.guidomia.domain.model.CarItem
 import com.berghachi.guidomia.utils.coolNumberFormat
 import com.berghachi.guidomia.utils.hide
@@ -63,24 +66,32 @@ class CarItemAdapter(private val carList: List<CarItem>?) :
             binding.ratingBarCar.rating = car.rating.toFloat()
             binding.ivCarPicture.loadImage(car.make)
 
+
             if (car.prosList.isEmpty()) {
-                binding.recyclerPros.hide()
+                binding.llPros.hide()
                 binding.txtTitlePros.hide()
             } else {
-                binding.recyclerPros.adapter =
-                    DetailCarItemAdapter(car.prosList.filter { it.isNotBlank() })
-                binding.recyclerPros.show()
+                fillDetail(binding.llPros,car.prosList.filter { it.isNotBlank() })
+                binding.llPros.show()
                 binding.txtTitlePros.show()
             }
 
             if (car.consList.isEmpty()) {
-                binding.recyclerCons.hide()
+                binding.llCons.hide()
                 binding.txtTitleCons.hide()
             } else {
-                binding.recyclerCons.adapter =
-                    DetailCarItemAdapter(car.consList.filter { it.isNotBlank() })
-                binding.recyclerCons.show()
+                fillDetail(binding.llCons,car.consList.filter { it.isNotBlank() })
+                binding.llCons.show()
                 binding.txtTitleCons.show()
+            }
+        }
+
+        private fun fillDetail(linearLayout: LinearLayout, pros: List<String>) {
+            linearLayout.removeAllViews()
+            pros.forEach {
+                val childView = DetailCarItemBinding.inflate(LayoutInflater.from(linearLayout.context), null,false)
+                childView.txtDescription.text = it
+                linearLayout.addView(childView.root)
             }
         }
     }
