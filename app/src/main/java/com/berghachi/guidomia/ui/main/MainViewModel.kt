@@ -76,9 +76,9 @@ class MainViewModel @Inject constructor(
         val cars = state.value
         return when {
             selectedMakeItemPosition == 0 && selectedModelItemPosition == 0 -> cars
-            selectedMakeItemPosition == 0 && selectedModelItemPosition != 0 -> cars.filter { it.model == models[selectedModelItemPosition] }
-            selectedMakeItemPosition != 0 && selectedModelItemPosition == 0 -> cars.filter { it.make == makes[selectedMakeItemPosition] }
-            else -> cars.filter { it.make == models[selectedMakeItemPosition] && it.model == makes[selectedModelItemPosition] }
+            selectedMakeItemPosition == 0 && selectedModelItemPosition != 0 -> cars.filter { it.model.lowercase() == models[selectedModelItemPosition].lowercase() }
+            selectedMakeItemPosition != 0 && selectedModelItemPosition == 0 -> cars.filter { it.make.lowercase() == makes[selectedMakeItemPosition].lowercase() }
+            else -> cars.filter { it.make.lowercase() == makes[selectedMakeItemPosition].lowercase() && it.model.lowercase() == models[selectedModelItemPosition].lowercase() }
         }
     }
 }
