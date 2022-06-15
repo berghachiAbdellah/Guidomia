@@ -30,9 +30,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
 
-        carAdapter = CarItemAdapter {
-
-        }
+        carAdapter = CarItemAdapter ()
 
         val cars = JsonReader.readFile(this, "car_list.json", Cars::class)
         binding.include.recyclerCars.apply {
@@ -41,7 +39,6 @@ class MainActivity : AppCompatActivity() {
                 getDivider()
             )
         }
-
         carAdapter.submitList(cars)
     }
 

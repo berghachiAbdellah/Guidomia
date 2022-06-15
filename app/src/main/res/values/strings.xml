@@ -93,4 +93,7 @@
     <string name="get_yours_now">Get your\'s now</string>
     <string name="filters">Filters</string>
     <string name="tacoma_2021">Tacoma 2021</string>
+    <string name="pros">Pros :</string>
+    <string name="cons">Cons :</string>
+    <string name="price">\"Price: \"</string>
 </resources>

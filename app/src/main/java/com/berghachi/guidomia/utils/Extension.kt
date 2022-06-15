@@ -2,6 +2,7 @@ package com.berghachi.guidomia.utils
 
 import android.view.View
 import android.widget.ImageView
+import androidx.constraintlayout.motion.widget.MotionLayout
 import java.text.DecimalFormat
 import kotlin.math.ln
 import kotlin.math.pow
@@ -16,6 +17,13 @@ fun ImageView.loadImage(fileName: String) {
 }
 
 
+fun View.show() {
+    this.visibility = View.VISIBLE
+}
+
+fun View.hide() {
+    this.visibility = View.GONE
+}
 
 fun Long.coolNumberFormat(): String {
     if (this < 1000) return "" + this
@@ -23,4 +31,14 @@ fun Long.coolNumberFormat(): String {
     val format = DecimalFormat("0.#")
     val value: String = format.format(this / 1000.0.pow(exp.toDouble()))
     return String.format("%s%c", value, "kMBTPE"[exp - 1])
+}
+
+fun MotionLayout.jumpToEnd() {
+    this.setTransitionDuration(0)
+    this.transitionToEnd()
+}
+
+fun MotionLayout.jumpToStart() {
+    this.setTransitionDuration(0)
+    this.transitionToStart()
 }
